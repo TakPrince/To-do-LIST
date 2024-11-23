@@ -1,0 +1,271 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  padding: 20px;
+}
+
+.center_form, input {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 10px;
+  border: none; /* Remove all borders */
+  border-bottom: 2px solid #000dfe55; /* Only the bottom border */
+  outline: none;
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #333;
+}
+
+
+.create_form, button {
+  padding: 10px;
+  background-color: rgb(52, 145, 237);
+  cursor: pointer;
+  color: white;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  width: 90px;
+}
+
+button:hover {
+  background-color: #000dfe;
+}
+
+/* Home container */
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.home h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Task container */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Checkbox and task text styling */
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.completed {
+  color: green;
+}
+
+.task-card p {
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.throughline {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.edit-input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+/* Action buttons styling */
+.task-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+
+/* Edit and delete buttons */
+.edit-btn, .delete-btn, .version-btn {
+  color: #007bff;
+}
+
+.edit-actions button {
+  margin-right: 10px;
+}
+
+.save-btn {
+  background-color: #28a745 !important;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.cancel-btn {
+  background-color: #dc3545 !important;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.loading {
+  font-size: 20px;
+  color: #007bff;
+  text-align: center;
+}
+
+.no-record {
+  text-align: center;
+}
+
+.versions {
+  margin-top: 20px;
+}
+
+.close-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Version History Section */
+.versions {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.versions h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.version-item {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.version-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.version-item .timestamp {
+  font-size: 14px;
+  color: #888;
+}
+
+.version-item .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.revert-btn {
+  background-color: #28a745 !important;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.revert-btn:hover {
+  background-color: #218838;
+}
+
+.close-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Expandable Section for Versions */
+.versions.collapsed {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.versions.expanded {
+  max-height: none;
+}
+
+.expand-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+.version_content{
+  padding: 10px;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
